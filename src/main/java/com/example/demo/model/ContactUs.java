@@ -1,9 +1,8 @@
 package com.example.demo.model;
 
-import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
+import jakarta.persistence.*; // For Entity, Table, Id, GeneratedValue, Column
+import org.hibernate.annotations.CreationTimestamp; // For created_at
+import org.hibernate.annotations.UpdateTimestamp;   // For updated_at
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,7 +17,7 @@ public class ContactUs {
     private String email;
     private String subject;
 
-    @Column(length = 1000) // Allow longer message text
+    @Column(length = 1000)
     private String message;
 
     @CreationTimestamp
